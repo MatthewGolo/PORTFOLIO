@@ -1,0 +1,38 @@
+/* Global Styles for Unique Portfolio */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .glass {
+    @apply bg-glass/80 backdrop-blur-xs border border-white/20;
+  }
+  .glass-light {
+    @apply bg-glassLight/80 backdrop-blur-xs border border-black/20;
+  }
+  .magnetic {
+    transition: transform 0.3s ease;
+  }
+  .tilt-hover {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .tilt-hover:hover {
+    transform: rotateX(5deg) rotateY(5deg) scale(1.05);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-primary/50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary rounded-full;
+}
