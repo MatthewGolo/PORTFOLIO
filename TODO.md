@@ -1,10 +1,9 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+# Fix Vercel Deployment Error (Permission denied on vue-tsc)
 
-import './style.css'
-
-const app = createApp(App)
-
-app.use(router)
-app.mount('#app')
+## Steps:
+- [x] Create TODO.md for tracking
+- [x] Edit package.json: Update build script to \"vite build\" (remove vue-tsc)
+- [x] Test local build: npm run build
+- [ ] Commit and push changes
+- [ ] Redeploy on Vercel and verify
+- [ ] Add optional type-check script and cleanup TODO
