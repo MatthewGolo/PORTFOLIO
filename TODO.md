@@ -2,7 +2,7 @@
 
 ## Steps:
 - [x] Create TODO.md for tracking
-- [x] Edit package.json: Update build script to \"vite build\" (remove vue-tsc)
+- [x] Edit package.json: Update build script to \"npx vite build\" (Vercel bin fix)
 - [x] Test local build: npm run build
 - [ ] Commit and push changes
 - [ ] Redeploy on Vercel and verify
