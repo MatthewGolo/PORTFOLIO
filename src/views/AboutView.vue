@@ -1,154 +1,127 @@
 <template>
-  <!-- Redesigned About - Timeline Flow Layout -->
-  <div class="relative min-h-screen py-24 overflow-hidden">
-    <!-- Floating background elements -->
-    <div class="absolute top-40 -left-32 w-64 h-64 bg-gradient-to-br from-secondary/20 to-accent/10 rounded-3xl blur-xl animate-float-slow"></div>
-    <div class="absolute bottom-40 -right-24 w-72 h-72 bg-gradient-to-tl from-accent/15 to-primary/30 rounded-full blur-2xl rotate-12"></div>
+  <!-- Ultra Minimal About - Single Column Flow -->
+  <section class="min-h-screen py-32 px-6 max-w-4xl mx-auto relative">
+    <!-- Subtle backdrop -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-950/50 via-primary/20"></div>
 
-    <div class="max-w-5xl mx-auto px-6 relative z-10">
-      <!-- Floating Title -->
-      <div class="text-center mb-32 -rotate-1">
-        <div class="inline-block glass-title px-12 py-8 rounded-2xl shadow-2xl backdrop-blur-lg">
-          <h1 class="text-6xl lg:text-7xl font-black bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent leading-tight">
-            About Me
+    <div class="relative z-10 space-y-24">
+      
+      <!-- Profile Header -->
+      <div class="text-center space-y-8 max-w-2xl mx-auto">
+        <div class="w-32 h-32 bg-gradient-to-br from-slate-200 via-white to-slate-300 rounded-2xl mx-auto shadow-xl ring-4 ring-white/20"></div>
+        <div>
+          <h1 class="font-mono text-5xl lg:text-6xl font-black text-white tracking-tight mb-4">
+            Charles Matthew Golo
           </h1>
+          <p class="text-2xl text-slate-400 font-light tracking-wide">
+            Frontend Developer
+          </p>
+        </div>
+        <p class="text-lg text-slate-400 max-w-xl mx-auto leading-relaxed opacity-90">
+          Philippines-based Vue.js developer creating clean, scalable web experiences.
+        </p>
+      </div>
+
+      <!-- Single Experience Flow -->
+      <div class="glass-card max-w-3xl mx-auto p-12 rounded-3xl backdrop-blur-xl">
+        <div class="flex items-start gap-8 lg:gap-16">
+          <!-- Left - Current Role -->
+          <div class="min-w-0 flex-1 space-y-6">
+            <div class="inline-flex items-center gap-3 px-6 py-3 bg-white/5 rounded-2xl backdrop-blur border border-white/10 w-fit">
+              <div class="w-3 h-3 bg-accent rounded-full"></div>
+              <span class="font-mono uppercase text-sm tracking-wider text-slate-300">Current</span>
+            </div>
+            <h2 class="text-3xl lg:text-4xl font-black text-white mb-6">
+              Frontend Developer
+            </h2>
+            <div class="space-y-4 text-xl text-slate-300 leading-relaxed">
+              <p>
+                Building production Vue.js applications at <span class="font-bold text-accent bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">DigiPlus Interactive</span>
+              </p>
+              <ul class="space-y-2 ml-6">
+                <li>• GameZone platform development</li>
+                <li>• SEO-optimized landing pages</li>
+                <li>• API integrations & real-time features</li>
+                <li>• Component libraries & reusable UI</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right - Quick Stats -->
+          <div class="hidden lg:block w-64 flex-shrink-0 pt-12">
+            <div class="space-y-8">
+              <div class="text-center p-6 bg-white/5 rounded-2xl backdrop-blur border border-white/10">
+                <div class="text-4xl font-black text-secondary mb-1">5+</div>
+                <div class="text-sm uppercase tracking-wider text-slate-400">Projects</div>
+              </div>
+              <div class="text-center p-6 bg-white/5 rounded-2xl backdrop-blur border border-white/10">
+                <div class="text-4xl font-black text-accent mb-1">2+</div>
+                <div class="text-sm uppercase tracking-wider text-slate-400">Years</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Flowing Timeline Layout -->
-      <div class="grid lg:grid-cols-12 gap-12 items-start">
-        <!-- Left - Profile & Timeline -->
-        <div class="lg:col-span-5 space-y-12">
-          <!-- Profile Card -->
-          <div class="glass-profile p-10 rounded-3xl relative overflow-hidden group hover:scale-[1.02] transition-all duration-700">
-            <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <div class="w-32 h-32 bg-gradient-to-br from-secondary via-accent to-primary rounded-3xl mx-auto mb-8 shadow-2xl relative z-10 ring-4 ring-white/10"></div>
-            <h2 class="text-3xl font-black text-center mb-6 text-transparent bg-gradient-to-r from-secondary to-accent bg-clip-text">
-              Charles Matthew Golo
-            </h2>
-            <p class="text-center opacity-90 mb-8 font-mono text-lg tracking-wide uppercase">Frontend Developer</p>
-            <div class="grid grid-cols-2 gap-4 text-sm opacity-80">
-              <div class="text-center p-4">
-                <div class="font-mono text-accent text-xl font-bold">Philippines</div>
-                <div>Las Piñas City</div>
-              </div>
-              <div class="text-center p-4">
-                <div class="font-mono text-secondary text-xl font-bold">Available</div>
-                <div>Full-time</div>
-              </div>
-            </div>
+      <!-- Skills Grid - Ultra Minimal -->
+      <div class="max-w-2xl mx-auto">
+        <h3 class="font-mono text-3xl font-black text-white mb-12 text-center tracking-tight">
+          Tech Stack
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="tech-stack-item p-6 rounded-xl hover:bg-white/5 transition-all backdrop-blur border border-white/5 hover:border-white/20 hover:scale-105">
+            <div class="text-2xl mb-2">⚛️</div>
+            <div class="font-mono text-sm text-slate-300">Vue.js</div>
           </div>
-
-          <!-- Quick Stats -->
-          <div class="glass-stats grid grid-cols-3 gap-4 p-8 rounded-2xl">
-            <div class="text-center">
-              <div class="text-2xl font-black text-accent mb-1">5+</div>
-              <div class="text-xs opacity-75 uppercase tracking-wider">Projects</div>
-            </div>
-            <div class="text-center">
-              <div class="text-2xl font-black text-secondary mb-1">2+</div>
-              <div class="text-xs opacity-75 uppercase tracking-wider">Years Exp</div>
-            </div>
-            <div class="text-center">
-              <div class="text-2xl font-black text-accent mb-1">10+</div>
-              <div class="text-xs opacity-75 uppercase tracking-wider">Technologies</div>
-            </div>
+          <div class="tech-stack-item p-6 rounded-xl hover:bg-white/5 transition-all backdrop-blur border border-white/5 hover:border-white/20 hover:scale-105">
+            <div class="text-2xl mb-2">⚡</div>
+            <div class="font-mono text-sm text-slate-300">JS/TS</div>
+          </div>
+          <div class="tech-stack-item p-6 rounded-xl hover:bg-white/5 transition-all backdrop-blur border border-white/5 hover:border-white/20 hover:scale-105">
+            <div class="text-2xl mb-2">🎨</div>
+            <div class="font-mono text-sm text-slate-300">Tailwind</div>
+          </div>
+          <div class="tech-stack-item p-6 rounded-xl hover:bg-white/5 transition-all backdrop-blur border border-white/5 hover:border-white/20 hover:scale-105">
+            <div class="text-2xl mb-2">🔧</div>
+            <div class="font-mono text-sm text-slate-300">Git</div>
           </div>
         </div>
+      </div>
 
-        <!-- Center - Experience Timeline -->
-        <div class="lg:col-span-2 flex items-start justify-center lg:-mt-12 relative">
-          <div class="timeline-line w-1 h-96 bg-gradient-to-b from-secondary to-accent opacity-30 absolute lg:left-1/2 transform -translate-x-1/2"></div>
-          <div class="space-y-16 lg:space-y-24">
-            <div class="timeline-item">
-              <div class="w-20 h-20 bg-gradient-to-r from-accent to-secondary rounded-2xl flex items-center justify-center shadow-2xl ring-8 ring-primary/20 mx-auto mb-6 transform rotate-12">
-                <span class="font-bold text-primary text-lg">🎮</span>
-              </div>
-              <h3 class="font-black text-xl text-center mb-3 text-secondary">GameZone Platform</h3>
-              <p class="opacity-80 text-center text-sm mb-4">Production Vue.js apps • SEO pages • API integration</p>
-              <div class="w-full bg-white/5 h-1 rounded-full mx-auto">
-                <div class="bg-gradient-to-r from-secondary to-accent h-1 rounded-full w-3/4 shadow-inner"></div>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="w-20 h-20 bg-gradient-to-r from-primary to-accent rounded-2xl flex items-center justify-center shadow-2xl ring-8 ring-primary/20 mx-auto mb-6 -rotate-6">
-                <span class="font-bold text-primary text-lg">🏆</span>
-              </div>
-              <h3 class="font-black text-xl text-center mb-3 text-accent">GTCC Tournament</h3>
-              <p class="opacity-80 text-center text-sm mb-4">H5 landing pages • CMS integration</p>
-              <div class="w-full bg-white/5 h-1 rounded-full mx-auto">
-                <div class="bg-gradient-to-r from-accent to-secondary h-1 rounded-full w-2/3 shadow-inner"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right - Bio & Skills Highlights -->
-        <div class="lg:col-span-5 space-y-8">
-          <!-- Bio Flow -->
-          <div class="glass-bio p-10 rounded-3xl relative">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-secondary/20 rounded-2xl -mr-12 -mt-12 blur-xl"></div>
-            <h3 class="text-3xl font-black mb-8 text-transparent bg-gradient-to-r from-secondary to-accent bg-clip-text">
-              My Journey
-            </h3>
-            <div class="space-y-4 text-lg leading-relaxed opacity-90 prose prose-invert max-w-none">
-              <p>Frontend Developer based in Philippines with hands-on experience building production web apps. Specializing in Vue.js, JavaScript, and Tailwind CSS.</p>
-              <p>Worked on user-facing platforms and internal systems, contributing to real-time features, SEO optimization, and reusable components. Collaborated in Agile teams.</p>
-            </div>
-          </div>
-
-          <!-- Why Me Cards - Staggered -->
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="glass-card p-8 rounded-2xl hover:scale-105 hover:-rotate-1 transition-all duration-500 relative z-10 bg-gradient-to-b from-transparent to-white/5">
-              <div class="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mb-4 shadow-xl">
-                <span class="font-bold text-primary text-lg">⚡</span>
-              </div>
-              <h4 class="font-bold text-xl mb-3 text-secondary">Production Ready</h4>
-              <p class="opacity-80">Scalable apps for real users</p>
-            </div>
-            <div class="glass-card p-8 rounded-2xl hover:scale-105 hover:rotate-1 transition-all duration-500 relative z-20 -mt-4 bg-gradient-to-b from-transparent to-accent/5 ml-auto">
-              <div class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-4 shadow-xl">
-                <span class="font-bold text-primary text-lg">🎯</span>
-              </div>
-              <h4 class="font-bold text-xl mb-3 text-accent">Team Player</h4>
-              <p class="opacity-80">Agile collaboration expert</p>
-            </div>
-          </div>
-        </div>
+      <!-- CTA -->
+      <div class="text-center">
+        <a href="/contact" class="inline-flex items-center gap-3 px-12 py-6 font-mono text-lg font-bold text-white bg-white/10 hover:bg-white/20 backdrop-blur-xl border border-white/20 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-white/10 group">
+          <span>Let's Work Together</span>
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">
-// About timeline
+// Pure CSS interactions
 </script>
 
 <style scoped>
-.glass-title {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.glass-profile, .glass-bio, .glass-card, .glass-stats {
+.glass-card {
   background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(40px);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 }
 
-.glass-profile:hover {
-  box-shadow: 0 30px 60px rgba(0, 245, 255, 0.15);
+.tech-stack-item {
+  text-align: center;
+  cursor: pointer;
 }
 
-.timeline-line {
-  box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
-}
-
-@keyframes float-slow {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(2deg); }
+@media (max-width: 1024px) {
+  .flex-1 {
+    min-width: 0;
+  }
 }
 </style>
 

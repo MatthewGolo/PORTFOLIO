@@ -1,118 +1,100 @@
 <template>
-  <!-- Minimalist Contact - Single Glass Sheet -->
-  <main class="min-h-screen flex items-center justify-center p-8 py-24 relative overflow-hidden">
-    <!-- Subtle background gradient -->
-    <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-primary/30 to-slate-900"></div>
+  <!-- Redesigned Contact - Floating Cards -->
+  <main class="min-h-screen py-24 px-6 flex items-center justify-center relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-950 to-primary/50"></div>
     
-    <!-- Floating particles -->
-    <div class="absolute inset-0 opacity-20 pointer-events-none">
-      <div class="absolute top-20 left-20 w-20 h-20 bg-secondary/30 rounded-full blur-xl animate-float"></div>
-      <div class="absolute top-1/2 right-32 w-16 h-16 bg-accent/25 rounded-full blur-lg animate-float" style="animation-delay: 1s;"></div>
-      <div class="absolute bottom-40 left-1/2 w-24 h-24 bg-secondary/20 rounded-full blur-2xl animate-float" style="animation-delay: 2s;"></div>
-    </div>
-
-    <!-- Single elegant contact sheet -->
-    <div class="relative z-10 w-full max-w-lg">
-      <div class="glass-sheet backdrop-blur-xl p-12 rounded-3xl shadow-2xl border border-white/10 max-w-md mx-auto">
-        
-        <!-- Header -->
-        <div class="text-center mb-16">
-          <div class="inline-flex items-center gap-3 mb-6 px-6 py-3 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10">
-            <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.27 4.84A2 2 0 0012 11a2 2 0 012-2 2 2 0 001.73.84L21 8m-6 4.84A2 2 0 0012 13a2 2 0 00-2 2 2 2 0 00-1.73-.84L3 16m18 0v4a1 1 0 01-1 1H1a1 1 0 01-1-1v-4"></path>
-            </svg>
-            <h1 class="font-mono text-2xl font-bold text-white tracking-tight">Get In Touch</h1>
-          </div>
-          <p class="text-lg text-slate-300 opacity-90 max-w-sm mx-auto leading-relaxed">
-            Ready to discuss your project? Here's how to reach me:
-          </p>
+    <div class="relative z-10 w-full max-w-md space-y-8">
+      
+      <!-- Main Contact Card -->
+      <div class="glass-main p-10 rounded-3xl backdrop-blur-xl shadow-2xl border border-white/10 hover:shadow-accent/20 transition-all duration-500 hover:scale-[1.02]">
+        <div class="text-center mb-10">
+          <h1 class="font-mono text-4xl font-black text-white mb-4 tracking-tight">
+            Say Hello
+          </h1>
+          <div class="w-24 h-1 bg-gradient-to-r from-transparent via-white to-transparent mx-auto rounded-full"></div>
         </div>
 
-        <!-- Contact Methods - Vertical Stack -->
-        <div class="space-y-8">
-          <!-- Email -->
-          <div class="group">
-            <div class="flex items-center justify-between mb-4">
-              <span class="font-mono text-slate-400 text-sm uppercase tracking-wider">Email</span>
-              <div class="w-2 h-2 bg-secondary rounded-full scale-0 group-hover:scale-100 transition-transform origin-center"></div>
-            </div>
-            <a href="mailto:matthewgolo06@gmail.com" class="block font-mono text-lg font-bold text-white hover:text-secondary transition-colors group-hover:translate-x-2">
-              matthewgolo06@gmail.com
-            </a>
+        <!-- Email - Primary -->
+        <div class="contact-item space-y-3 mb-8">
+          <div class="flex items-center gap-3 text-slate-400 font-mono text-sm uppercase tracking-wider">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.27 4.84A2 2 0 0012 11a2 2 0 012-2 2 2 0 001.73.84L21 8m-6 4.84A2 2 0 0012 13a2 2 0 00-2 2 2 2 0 00-1.73-.84L3 16m18 0v4a1 1 0 01-1 1H1a1 1 0 01-1-1v-4"></path>
+            </svg>
+            Email
           </div>
+          <a href="mailto:matthewgolo06@gmail.com" class="block font-mono text-xl font-bold text-white hover:text-secondary transition-all hover:translate-x-2 group">
+            matthewgolo06@gmail.com
+          </a>
+        </div>
 
-          <!-- Phone -->
-          <div class="group">
-            <div class="flex items-center justify-between mb-4">
-              <span class="font-mono text-slate-400 text-sm uppercase tracking-wider">Phone</span>
-              <div class="w-2 h-2 bg-accent rounded-full scale-0 group-hover:scale-100 transition-transform origin-center"></div>
-            </div>
-            <a href="tel:+639766229247" class="block font-mono text-lg font-bold text-white hover:text-accent transition-colors group-hover:translate-x-2">
-              +63 976 622 9247
-            </a>
+        <!-- Phone -->
+        <div class="contact-item space-y-3 mb-8">
+          <div class="flex items-center gap-3 text-slate-400 font-mono text-sm uppercase tracking-wider">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 01 1.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            Phone
           </div>
+          <a href="tel:+639766229247" class="block font-mono text-xl font-bold text-white hover:text-accent transition-all hover:translate-x-2">
+            +63 976 622 9247
+          </a>
+        </div>
 
-          <!-- Location -->
-          <div class="group">
-            <div class="flex items-center justify-between mb-4">
-              <span class="font-mono text-slate-400 text-sm uppercase tracking-wider">Location</span>
-              <div class="w-2 h-2 bg-secondary rounded-full scale-0 group-hover:scale-100 transition-transform origin-center"></div>
-            </div>
-            <p class="font-mono text-lg font-bold text-slate-200 group-hover:text-white transition-colors">
-              Las Piñas City<br />
-              <span class="text-sm font-normal opacity-75">Philippines</span>
-            </p>
-          </div>
-
-          <!-- LinkedIn -->
-          <div class="group pt-8 border-t border-white/10">
-            <div class="flex items-center justify-between mb-4">
-              <span class="font-mono text-slate-400 text-sm uppercase tracking-wider">LinkedIn</span>
-              <div class="w-2 h-2 bg-accent rounded-full scale-0 group-hover:scale-100 transition-transform origin-center"></div>
-            </div>
-            <a href="https://www.linkedin.com/in/charles-matthew-golo-7721912b3" target="_blank" rel="noopener" class="inline-flex items-center font-mono text-lg font-bold text-slate-200 hover:text-accent transition-all group-hover:translate-x-2">
-              Charles Matthew Golo
-              <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-3.334 9.319a.496.496 0 01-.948 0L5.387 5.316a1 1 0 011.633-1.265l1.852 5.175 1.444-4.04A1 1 0 0112.316 3.051z" clip-rule="evenodd"></path>
+        <!-- Social -->
+        <div class="pt-8 border-t border-white/10">
+          <div class="flex items-center justify-center gap-6 pt-8">
+            <a href="https://www.linkedin.com/in/charles-matthew-golo-7721912b3" target="_blank" class="p-4 rounded-2xl hover:bg-white/10 transition-all backdrop-blur border border-white/20 hover:border-white/40 hover:scale-110">
+              <svg class="w-6 h-6 text-slate-300 hover:text-accent" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0h.002z"/>
               </svg>
             </a>
           </div>
         </div>
+      </div>
 
-        <!-- Primary CTA -->
-        <div class="text-center mt-20 pt-12 border-t border-white/10">
-          <button class="mx-auto px-12 py-5 font-mono text-lg font-bold text-white bg-gradient-to-r from-secondary via-accent to-secondary bg-clip-text text-transparent border border-white/20 hover:border-white/40 backdrop-blur-xl rounded-2xl px-12 py-5 transition-all duration-300 hover:shadow-2xl hover:shadow-accent/20 hover:scale-[1.02] inline-block">
-            Start Project →
-          </button>
+      <!-- Location Badge -->
+      <div class="text-center">
+        <div class="inline-flex items-center gap-2 px-6 py-3 bg-white/5 rounded-2xl backdrop-blur border border-white/10 text-slate-400 font-mono text-sm tracking-wider">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+          </svg>
+          Las Piñas City, Philippines
         </div>
+      </div>
+
+      <!-- Final CTA -->
+      <div class="text-center pt-12">
+        <p class="text-slate-500 text-sm mb-8 font-mono uppercase tracking-wider">
+          Available for new projects
+        </p>
+        <a href="mailto:matthewgolo06@gmail.com" class="inline-block px-12 py-4 font-mono font-bold text-lg text-white border-2 border-white/30 hover:border-white backdrop-blur-xl rounded-2xl hover:bg-white/10 transition-all duration-300 hover:shadow-2xl">
+          Start Conversation →
+        </a>
       </div>
     </div>
   </main>
 </template>
 
 <script setup lang="ts">
-// Contact interactions via CSS
+// CSS only interactions
 </script>
 
 <style scoped>
-.glass-sheet {
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(40px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+.glass-main {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-@keyframes float {
-  0%, 100% { 
-    transform: translateY(0px);
-  }
-  50% { 
-    transform: translateY(-10px);
-  }
+.contact-item {
+  border-left: 3px solid transparent;
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+.contact-item:hover {
+  border-left-color: theme('colors.secondary');
+  padding-left: 1rem;
+  margin-left: -1rem;
+  transition: all 0.3s ease;
 }
 </style>
 
